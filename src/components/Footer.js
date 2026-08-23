@@ -32,20 +32,19 @@ export default function Footer() {
         <div>
           <div className="text-white font-semibold text-sm mb-3">Categories</div>
           <div className="space-y-2 text-sm">
-            <a href="#" className="block hover:text-white">Horror</a>
-            <a href="#" className="block hover:text-white">Romance</a>
-            <a href="#" className="block hover:text-white">Thriller</a>
-            <a href="#" className="block hover:text-white">Mystery</a>
+            <a href="/category/horror" className="block hover:text-white">Horror</a>
+            <a href="/category/romance" className="block hover:text-white">Romance</a>
+            <a href="/category/thriller" className="block hover:text-white">Thriller</a>
           </div>
         </div>
 
         <div>
           <div className="text-white font-semibold text-sm mb-3">Support</div>
           <div className="space-y-2 text-sm">
-            <a href="#" className="block hover:text-white">Contact Us</a>
-            <a href="#" className="block hover:text-white">FAQ</a>
-            <a href="#" className="block hover:text-white">Privacy Policy</a>
-            <a href="#" className="block hover:text-white">Terms of Service</a>
+            <a href="/contact" className="block hover:text-white">Contact Us</a>
+            <a href="/faq" className="block hover:text-white">FAQ</a>
+            <a href="/privacy-policy" className="block hover:text-white">Privacy Policy</a>
+            <a href="/terms" className="block hover:text-white">Terms of Service</a>
           </div>
         </div>
       </div>
