@@ -69,11 +69,7 @@ function SearchResults() {
                 <Star size={12} className="fill-amber-400 text-amber-400" />
                 {book.rating}
               </span>
-<<<<<<< HEAD
               <span className="text-sm font-bold text-slate-900">₦{book.price}</span>
-=======
-              <span className="text-sm font-bold text-slate-900">${book.price}</span>
->>>>>>> 6ac56c1c6ecc29e5b339b315916260a52f89a6cf
             </div>
           </a>
         ))}
