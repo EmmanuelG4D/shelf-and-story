@@ -1,11 +1,11 @@
 import { Ghost, Heart, Crosshair, Search, Sparkles, MoreHorizontal } from "lucide-react";
 
 const categories = [
-  { name: "Horror", count: "1,245 books", icon: Ghost, bg: "bg-slate-100", color: "text-slate-500" },
-  { name: "Romance", count: "2,345 books", icon: Heart, bg: "bg-rose-50", color: "text-rose-500" },
-  { name: "Thriller", count: "1,987 books", icon: Crosshair, bg: "bg-sky-50", color: "text-sky-600" },
-  { name: "Mystery", count: "1,234 books", icon: Search, bg: "bg-emerald-50", color: "text-emerald-600" },
-  { name: "Fantasy", count: "1,456 books", icon: Sparkles, bg: "bg-purple-50", color: "text-purple-500" },
+  { name: "Horror", count: "New stories added regularly", icon: Ghost, bg: "bg-slate-100", color: "text-slate-500" },
+  { name: "Romance", count: "New stories added regularly", icon: Heart, bg: "bg-rose-50", color: "text-rose-500" },
+  { name: "Thriller", count: "New stories added regularly", icon: Crosshair, bg: "bg-sky-50", color: "text-sky-600" },
+  { name: "Mystery", count: "New stories added regularly", icon: Search, bg: "bg-emerald-50", color: "text-emerald-600" },
+  { name: "Fantasy", count: "New stories added regularly", icon: Sparkles, bg: "bg-purple-50", color: "text-purple-500" },
 ];
 
 export default function Categories() {

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Home, Grid3x3, TrendingUp, Star, Sparkles, Crown, Shield, Download, BookMarked, Headphones, ChevronDown } from "lucide-react";
+import { Home, Grid3x3, TrendingUp, Star, Sparkles, Shield, Download, BookMarked, Headphones, ChevronDown } from "lucide-react";
 
 const otherLinks = [
   { label: "Home", icon: Home, href: "/", active: true },
@@ -54,13 +54,6 @@ export default function Sidebar() {
           </a>
         ))}
       </nav>
-
-      <div className="rounded-xl bg-blue-50 p-5 mb-6">
-        <Crown size={20} className="text-blue-700 mb-2" />
-        <div className="font-bold text-slate-900 text-sm mb-1">Unlimited Reading</div>
-        <p className="text-xs text-slate-500 mb-4">Read all premium books with our membership</p>
-        <button className="w-full h-9 rounded-full bg-blue-700 text-white text-sm font-medium hover:bg-blue-800 transition">Join Premium</button>
-      </div>
 
       <div>
         <div className="font-bold text-slate-900 text-sm mb-3">Why Choose Us?</div>
