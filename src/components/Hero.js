@@ -12,7 +12,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 sm:mt-6 text-slate-500 text-base sm:text-lg max-w-md">
-            Explore thousands of ebooks across horror, romance, thriller and more.
+            Original ebooks across horror, romance, thriller and more — read instantly after purchase.
           </p>
 
           <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
@@ -27,13 +27,13 @@ export default function Hero() {
 
           <div className="mt-8 sm:mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
             {[
-              ["10,000+", "Ebooks"],
-              ["50+", "Genres"],
-              ["5,000+", "Happy Readers"],
-              ["24/7", "Support"],
-            ].map(([stat, label]) => (
-              <div key={label}>
-                <div className="text-lg sm:text-xl font-bold text-slate-900">{stat}</div>
+              ["Instant Access", "Read right after purchase"],
+              ["Secure Checkout", "Powered by Paystack"],
+              ["Read Anywhere", "No app needed"],
+              ["Original Stories", "Written for this platform"],
+            ].map(([title, label]) => (
+              <div key={title}>
+                <div className="text-sm sm:text-base font-bold text-slate-900">{title}</div>
                 <div className="text-xs text-slate-400 mt-0.5">{label}</div>
               </div>
             ))}
