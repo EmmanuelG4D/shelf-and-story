@@ -7,12 +7,19 @@ export default function TermsPage() {
       <Header />
       <div className="max-w-2xl mx-auto px-6 py-16">
         <h1 className="text-3xl font-bold text-slate-900 mb-3">Terms of Service</h1>
-        <p className="text-slate-400 text-sm mb-10">Last updated: August 2026</p>
+        <p className="text-slate-400 text-sm mb-10">Last updated: September 2026</p>
 
         <div className="space-y-6 text-sm text-slate-600 leading-relaxed">
           <p>
             By using Shelf & Story, you agree to the following terms.
           </p>
+
+          <div>
+            <h2 className="text-slate-900 font-semibold mb-2">Copyright & Authorship</h2>
+            <p>
+              All books published on Shelf & Story are original works written and owned by Okafor Emmanuel, the sole author and copyright holder of this platform's content. Shelf & Story does not distribute, sell, or license books from third-party authors. Any resemblance to other works is coincidental.
+            </p>
+          </div>
 
           <div>
             <h2 className="text-slate-900 font-semibold mb-2">Purchases</h2>
