@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Star } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import { USD_TO_NGN_RATE } from "@/lib/exchangeRate";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -72,27 +73,41 @@ export default function BookPage() {
       return;
     }
 
+    const ngnAmount = Math.round(book.price * USD_TO_NGN_RATE * 100);
+
     const PaystackPop = (await import("@paystack/inline-js")).default;
     const paystack = new PaystackPop();
 
     paystack.newTransaction({
       key: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY,
       email: session.user.email,
-      amount: Math.round(book.price * 100),
+      amount: ngnAmount,
       currency: "NGN",
       onSuccess: async function (transaction) {
-        const { error } = await supabase.from("purchases").insert([
-          {
-            user_id: session.user.id,
-            book_id: book.id,
-          },
-        ]);
+        setBuyStatus("Verifying payment...");
 
-        if (error) {
-          setBuyStatus("Payment succeeded, but saving your purchase failed: " + error.message);
-        } else {
+        try {
+          const res = await fetch("/api/verify-payment", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              reference: transaction.reference,
+              userId: session.user.id,
+              bookId: book.id,
+            }),
+          });
+
+          const result = await res.json();
+
+          if (!res.ok || result.error) {
+            setBuyStatus("Payment could not be verified: " + (result.error || "unknown error"));
+            return;
+          }
+
           setBuyStatus("Payment successful! This book is now in your library.");
           setHasPurchased(true);
+        } catch (err) {
+          setBuyStatus("Something went wrong verifying your payment: " + err.message);
         }
       },
       onCancel: function () {
@@ -172,7 +187,7 @@ export default function BookPage() {
 
           <div className="flex items-center gap-4">
             <span className="text-2xl font-bold text-slate-900">
-              ₦{book.price}
+              ${book.price}
             </span>
 
             {checkingPurchase ? (
