@@ -103,6 +103,12 @@ export default function Header() {
           {session && (
             <a href="/library" className="hover:text-slate-900 transition">My Library</a>
           )}
+          {session && (
+            <a href="/submit-book" className="hover:text-slate-900 transition">Publish a Book</a>
+          )}
+          {session && (
+            <a href="/author-dashboard" className="hover:text-slate-900 transition">Author Dashboard</a>
+          )}
         </nav>
 
         <div className="hidden sm:flex items-center gap-3 shrink-0">
@@ -139,6 +145,12 @@ export default function Header() {
           <a href="/category/thriller" className="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Thriller</a>
           {session && (
             <a href="/library" className="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">My Library</a>
+          )}
+          {session && (
+            <a href="/submit-book" className="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Publish a Book</a>
+          )}
+          {session && (
+            <a href="/author-dashboard" className="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Author Dashboard</a>
           )}
 
           <div className="pt-3 border-t border-slate-100 mt-2 space-y-2">
