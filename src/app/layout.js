@@ -14,6 +14,13 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Shelf & Story — Original Ebooks, Read Instantly",
   description: "Original ebooks across horror, romance, thriller and more — read instantly after purchase.",
+  openGraph: {
+    title: "Shelf & Story — Original Ebooks, Read Instantly",
+    description: "Original ebooks across horror, romance, thriller and more — read instantly after purchase.",
+    url: "https://shelf-and-story.netlify.app",
+    siteName: "Shelf & Story",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
