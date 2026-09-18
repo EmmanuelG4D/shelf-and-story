@@ -122,6 +122,15 @@ export default function AdminPage() {
         <button onClick={handleLogout} className="text-sm text-slate-500 hover:text-slate-800">Log Out</button>
       </div>
 
+      <div className="flex gap-3 mb-8">
+        <a href="/admin-review" className="text-sm px-4 h-9 leading-9 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-50 transition">
+          Review Submissions
+        </a>
+        <a href="/admin-payouts" className="text-sm px-4 h-9 leading-9 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-50 transition">
+          Author Payouts
+        </a>
+      </div>
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-1">Title</label>

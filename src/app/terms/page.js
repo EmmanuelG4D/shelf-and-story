@@ -17,7 +17,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-slate-900 font-semibold mb-2">Copyright & Authorship</h2>
             <p>
-              All books published on Shelf & Story are original works written and owned by Okafor Emmanuel, the sole author and copyright holder of this platform's content. Shelf & Story does not distribute, sell, or license books from third-party authors. Any resemblance to other works is coincidental.
+              Books published on Shelf & Story are either original works written by Okafor Emmanuel, founder of the platform, or original works submitted by independent authors who retain copyright over their own submissions. Every book on the platform is reviewed before publication to confirm the submitting author holds the rights to the work. Shelf & Story does not knowingly distribute unlicensed or unauthorized third-party content.
             </p>
           </div>
 
