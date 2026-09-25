@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Search, BookOpen, ChevronDown, Menu, X } from "lucide-react";
+import { Search, BookOpen, ChevronDown, Menu, X, Globe } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 export default function Header() {
@@ -111,6 +111,12 @@ export default function Header() {
           )}
         </nav>
 
+        <div className="hidden sm:flex items-center gap-2 shrink-0 px-3 h-9 rounded-full bg-blue-50 border border-blue-100">
+          <Globe size={15} className="text-blue-700" />
+          <span className="text-xs font-semibold text-blue-700">Translate</span>
+          <div id="google_translate_element" className="text-xs" />
+        </div>
+
         <div className="hidden sm:flex items-center gap-3 shrink-0">
           {session ? (
             <button onClick={handleLogout} className="hidden md:block px-4 h-10 rounded-full border border-slate-200 text-sm font-medium text-slate-700 hover:bg-slate-50 transition">
@@ -139,6 +145,11 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="lg:hidden border-t border-slate-100 px-4 py-4 space-y-1 bg-white">
+          <div className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-blue-50 border border-blue-100 mb-2">
+            <Globe size={15} className="text-blue-700" />
+            <span className="text-xs font-semibold text-blue-700">Translate</span>
+            <div id="google_translate_element_mobile" className="text-xs" />
+          </div>
           <a href="/" className="block px-3 py-2.5 rounded-lg text-sm font-medium text-[#1d4fd8]">Home</a>
           <a href="/category/horror" className="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Horror</a>
           <a href="/category/romance" className="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Romance</a>
