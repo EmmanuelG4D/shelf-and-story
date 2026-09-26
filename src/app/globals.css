@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Force Google Translate widget to always display, on every screen size */
+.goog-te-gadget,
+.goog-te-gadget-simple,
+#google_translate_element {
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.goog-te-gadget img {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
